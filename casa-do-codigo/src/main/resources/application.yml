@@ -1,0 +1,19 @@
+micronaut:
+  application:
+    name: casaDoCodigo
+
+datasources:
+  default:
+    url: ${DB_URL:`jdbc:postgresql://localhost:5432/minha_base`}
+    driverClassName: org.postgresql.Driver
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:123456}
+
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        hbm2ddl:
+          auto: update
