@@ -1,9 +1,10 @@
 package com.renato.autores
 
-class DetalhesAutorResponse(autor: Autor) {
+class DetalhesAutorResponse(
+    val nome: String,
+    val email: String,
+    val descricao: String,
+) {
+    constructor(autor: Autor) : this(autor.nome, autor.email, autor.descricao)
+  }
 
-    val nome: String = autor.nome
-    val email: String = autor.email
-    val descricao: String = autor.descricao
-
-}
